@@ -1,0 +1,49 @@
+#myprojects {
+    width: 100%;
+    min-height: 100vh;
+    background-image: $color-white;
+
+    nav {
+        margin-top: 15vh;
+        margin-bottom: 8vh;
+
+        a {
+            color: $color-black;
+        }
+
+        a.active {
+            color: #FFF;
+        }
+    }
+
+    .card {
+        margin: 0 auto;
+        margin-top: 30px;
+        box-shadow: 0px 2px 2px $color-black;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+
+        &:hover {
+            transition: all .2s;
+            transform: scale(1.1);
+        }
+    }
+
+    .card-body {
+        text-align: center;
+        min-height: 240px;
+
+        h5 {
+            font-size: 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+    }
+
+    
+}

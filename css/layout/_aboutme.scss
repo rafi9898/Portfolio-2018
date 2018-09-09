@@ -1,0 +1,75 @@
+#aboutme {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFF;
+    animation: section 0.9s;
+
+    .myphoto {
+        text-align: center;
+        margin-top: 16vh;
+
+        img {
+            margin: 0 auto;
+            width: 50%;
+            box-shadow: 2px 4px 12px black;
+            border-radius: 8px 8px;
+        }
+        
+    }
+
+    .info {
+        margin-top: 16vh;
+        text-align: center;
+
+
+        h2 {
+            font-size: 26px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 1.5px;
+            color: $color-black;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 33px;
+            color: $color-black;
+            text-align: center;
+            padding: 0 20px 0 20px;
+        }
+
+        p:last-child {
+            margin-bottom: 50px;
+        }
+    }
+
+    .cloud {
+        position: relative;
+        width: 100%;
+        margin-top: 100px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            animation: Cloud 24s infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-delay: 18s;
+        }
+
+        img:last-child {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 80px;
+            animation: Cloud 24s infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+    }
+}

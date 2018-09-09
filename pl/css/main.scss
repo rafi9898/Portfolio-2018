@@ -1,0 +1,106 @@
+@import "reset/reset";
+
+@import "variables/variables";
+
+@import "layout/navigation";
+@import "layout/home";
+@import "layout/aboutme.scss";
+@import "layout/myskills";
+@import "layout/myprojects";
+@import "layout/contact";
+@import "layout/responsive";
+
+@import "animations/animations";
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#contact {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #56ab2f  0%, #a8e063 100%);
+    animation: section 0.9s;
+
+    .section-title {
+        text-align: center;
+        margin-top: 17vh;
+
+        h2{
+            font-size: 28px;
+            text-transform: uppercase;
+            color: $color-white;
+            font-weight: bolder;
+            letter-spacing: 0.9px;
+            text-shadow: 1px 2px 10px $color-dark;
+        }
+    }
+
+    form {
+        text-align: center;
+
+        input {
+            width: 60vw;
+            text-align: center;
+            margin: 0 auto;
+
+            &:first-child {
+                margin-top: 40px;
+            }
+        }
+
+        textarea {
+            width: 60vw;
+            min-height: 250px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .mysocial {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        
+        a {
+            margin-right: 50px;
+            margin: 0 auto;
+            &:last-child {
+                margin-right: none;
+            }
+        }
+
+        i {
+            font-size: 33px;
+            color: $color-white;
+            cursor: pointer;
+            transition: all .3s;
+
+
+            &:hover {
+                transition: all .3s;
+                transform: scale(1.1) rotate(45deg);
+            }
+        }
+
+        .fa-github:hover {
+            color: #c9510c;
+        }
+
+        .fa-linkedin:hover {
+            color: #0077b5;
+        }
+
+        .fa-instagram:hover {
+            color: #fbad50;
+        }
+    }
+}

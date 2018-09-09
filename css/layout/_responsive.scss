@@ -1,0 +1,238 @@
+@media(max-width: 1370px) {
+    #aboutme {
+        .cloud {
+            display: none;
+        }
+
+        .info {
+    
+            h2 {
+                font-size: 20px;
+            }
+    
+            p {
+                font-size: 17.5px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    #home {
+        .title-header {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .language {
+            padding-top: 20vh;
+            padding-bottom: 5vh;
+        }
+    }
+
+    .navigation {
+        &__checkbox {
+            display: none;
+        }
+    
+        &__button {
+            background-color: $color-white;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 10px 30px rgba($color-black, .1);
+            text-align: center;
+            cursor: pointer;
+        }
+    
+        &__background {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: fixed;
+            top: 25px;
+            left: 25px;
+            background-image: radial-gradient( #3D4E81, #5753C9, #6E7FF3);
+            z-index: 1000;
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+            // transform: scale(80);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 35px;
+
+        &,
+        &::before,
+        &::after {
+            width: 30px;
+            height: 2px;
+            background-color: $color-dark-2;
+            display: inline-block;
+        }
+    }
+    .navigation .navigation__icon {
+        margin-top: 25px;
+    }
+
+    .navigation__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 10px 20px;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 220%;
+            transition: all 0.4s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: #5753C9;
+            transform: translateX(10px);
+        }
+    }
+
+    .navigation__item {
+        margin: 20px;
+    }
+
+    #aboutme {
+        .cloud {
+            display: none;
+        }
+
+        .info {
+    
+            h2 {
+                font-size: 17px;
+            }
+    
+            p {
+                font-size: 15.5px;
+            }
+        }
+
+        .myphoto {
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    #myprojects {
+        .card {
+            padding: 0 20px 0 20px;
+            h5 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    #aboutme {
+        .myphoto {
+            margin-top: 10vh;
+            img {
+                width: 40%;
+            }
+        }
+
+        .info {
+            margin-top: 10vh;
+
+            h2 {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    #myskills {
+        .title-section {
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        div {
+            img {
+                width: 40%;
+                margin-right: 0;
+            }
+        }
+
+        .durning {
+            h3 {
+                font-size: 17px;
+            }
+    
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    #home {
+        overflow-y: auto;
+        overflow-x: auto;
+        .main-img {
+            display: none;
+        }
+        
+        .title-header {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 35svh;
+        }
+    }
+
+    #contact {
+        h2{
+            font-size: 18px !important;
+        }
+
+        form {
+            input {
+                width: 80vw !important;
+            }
+
+            textarea {
+                width: 80vw !important;
+            }
+
+            button {
+                font-size: 16px !important;
+            }
+        }
+        
+    }
+}

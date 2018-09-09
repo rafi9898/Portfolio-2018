@@ -1,0 +1,147 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 70px;
+        width: 70px;
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 10px 30px rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__background {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        position: fixed;
+        top: 35px;
+        left: 35px;
+        background-image: radial-gradient( #3D4E81, #5753C9, #6E7FF3);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        // transform: scale(80);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+        width: 0;
+        opacity: 0;
+        display: none;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__item {
+        margin: 36px;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 300;
+            padding: 10px 20px;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 220%;
+            transition: all 0.4s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: #5753C9;
+            transform: translateX(10px);
+        }
+    }
+
+    //FUNCTIONALITY
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        display: inline-block;
+        width: 100%;
+    }
+
+    //ICON
+    .navigation__icon {
+        position: relative;
+        margin-top: 35px;
+
+        &,
+        &::before,
+        &::after {
+            width: 20px;
+            height: 2px;
+            background-color: $color-dark-2;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -10px;
+    }
+
+    &__button:hover &__icon::after {
+        top: 10px;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

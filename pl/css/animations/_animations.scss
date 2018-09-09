@@ -1,0 +1,41 @@
+@keyframes topicName{
+    0% {
+        opacity: 0;
+        transform: scale(1.6);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes IntroImg {
+    0% {
+        right: -20%;
+    }
+
+    100% {
+        right: -5%;
+    }
+}
+
+@keyframes Cloud {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes section {
+    0% {
+        transform: scale(50);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
